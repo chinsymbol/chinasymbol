@@ -30,6 +30,7 @@
  
 
 </head>
+
 <body text="#000000" bgcolor="#FFFFFF" link="#0000EE" vlink="#551A8B" alink="#FF0000" >
 <span id="pageif" value="en"></span><span id="pageremap" value=""></span><span id="nomotd"></span><div id="menubar">
 <div id="language" style="zoom: 1;">
@@ -37,7 +38,7 @@
 </div><span class="menuitem container"><div style="display: inline-block; zoom: 1; *display: inline;'"><div class="sprite-expand" title="+" id="x47084" class="subtitle"><div></div></div></div><a class="etext" style="font-weight: bold;" id="m47084" href="confucianism" >动物</a><br />
 
 
-<span class="subcontents"><span style="float: right; display: block; "><div style="display: inline-block; zoom: 1; *display: inline;'"></div></span>　<div style="display: inline-block; zoom: 1; *display: inline;'"></div><a class="etext" style="font-weight: bold;" href="liji">牛(cow/bull)</a><br />
+<span class="subcontents"><span style="float: right; display: block; "><div style="display: inline-block; zoom: 1; *display: inline;'"></div></span>　<div style="display: inline-block; zoom: 1; *display: inline;'"></div><a class="etext" style="font-weight: bold;" onclick="replaceImages(this.innerText)">牛(cow/bull)</a><br />
 
 
 <span style="float: right; display: block; "><div style="display: inline-block; zoom: 1; *display: inline;'"></div></span>　<div style="display: inline-block; zoom: 1; *display: inline;'"></div><a class="etext" style="font-weight: bold;" href="liji">羊(goat/sheep)</a><br />
@@ -170,7 +171,21 @@ function applyfilter(topicid) {
    </div>
 </div>
 
+<script type="text/javascript">
+function replaceImages(symbol) {
+  // Get all the img elements in the table
+  const images = document.querySelectorAll('#titleline img');
 
+  // Loop through the images and replace their src attributes
+  for (let i = 0; i < images.length; i++) {
+    const newSrc = ${symbol}${i}.jpg`;
+    images[i].src = newSrc;
+    images[i].alt = `图片${i}`;
+  }
+}
+
+</script>
+	
 
 <script type="text/javascript">
 var tids=document.getElementById('m4463');

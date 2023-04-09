@@ -26,25 +26,9 @@
  <script type="text/javascript" >if (top.location != self.location) { top.location = self.location; }</script>
  
 <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//ctext.org/static/analytics.js','ga');ga('create', 'UA-15375954-1', 'auto');ga('send', 'pageview');</script>
-
- <script type="text/javascript">
-function replaceImages(symbol) {
-  // Get all the img elements in the table
-  const images = document.querySelectorAll('#titleline img[alt]');
-
-  // Loop through the images and replace their src attributes
-  for (let i = 0; i < images.length; i++) {
-    const newSrc = 'https://chinsymbol.github.io/${symbol}_0.PNG`;
-    images[i].src = newSrc;
-    images[i].alt = `图片${i}`;
-  }
-}
-</script>
 </head>
 
 
-
-</script>
 <body text="#000000" bgcolor="#FFFFFF" link="#0000EE" vlink="#551A8B" alink="#FF0000" >
 <span id="pageif" value="en"></span><span id="pageremap" value=""></span><span id="nomotd"></span><div id="menubar">
 <div id="language" style="zoom: 1;">
@@ -185,7 +169,19 @@ function applyfilter(topicid) {
    </div>
 </div>
 
+ <script type="text/javascript">
+function replaceImages(symbol) {
+  // Get all the img elements in the table
+  const images = document.querySelectorAll('#titleline img[alt]');
 
+  // Loop through the images and replace their src attributes
+  for (let i = 0; i < images.length; i++) {
+    const newSrc = 'https://chinsymbol.github.io/${symbol}_0.PNG`;
+    images[i].src = newSrc;
+    images[i].alt = `图片${i}`;
+  }
+}
+</script>
 	
 
 <script type="text/javascript">

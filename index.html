@@ -129,7 +129,12 @@
 </span></span>
 </span></span>
 
-<div class="menuitem listhead opt"><a  style="font-weight: bold;" >Notes</a></div><div class="menuitem listhead"><a  style="font-weight: bold;"">Resources</a></div><div class="menuitem listhead"><a  style="font-weight: bold;" >Dictionary</a></div><div class="menuitem listhead"><a  style="font-weight: bold;">Discussion</a></div><div class="menuitem listhead"><a  style="font-weight: bold;" >Library</a></div><div class="menuitem listhead"><a  style="font-weight: bold;">Wiki</a></div><div class="menuitem listhead"><a  style="font-weight: bold;">Data Wiki</a></div></div>
+<div class="menuitem listhead opt"><a  style="font-weight: bold;" >Notes</a></div>
+<div class="menuitem listhead"><a  style="font-weight: bold;">Resources</a></div>
+<div class="menuitem listhead"><a  style="font-weight: bold;">Discussion</a></div>
+
+
+</div>
 
 
 
@@ -153,21 +158,68 @@ function applyfilter(topicid) {
 </script>
 </div>
 
+<div id="notes" style="position: absolute; top: 0; right: 0;">
+   <div class="noprint opt" style="height: 47px; margin: 5px; float: right; text-align: right;"></div>
+    <div style="overflow-x: auto;">
+	   <table id="notes" border="0" style="display: flex; flex-direction: row;">
+	  <tr>
+    <th style="font-weight: bold; text-align: right;font-size: 16px; "></th>
+    <td>①v1即通常所说的甲骨文，采用了汉仪字体和清华大学美术学院陈楠教授合作开发的”汉仪陈体甲骨文“字体,如有侵权，请联系作者</td>
+  </tr>
+  <tr>
+  	  <tr>
+    <th style="font-weight: bold; text-align: right;font-size: 16px; "></th>
+  	<td>v1 The inscriptions on oracle bones, commonly known as oracle bone script, are rendered using the "HY Chen Ti Ji Gu Wen"
+	font,</td>
+	  </tr>
+	    	  <tr>
+    <th style="font-weight: bold; text-align: right;font-size: 16px; "></th>
+  	<td>which was developed in collaboration with Professor Chen Nan of the Tsinghua University Academy of Fine Arts. 
+	If there is any infringement, please contact the author.</td>
+	  </tr>
+  <tr>
+	
+    <th style="font-weight: bold;  text-align: right;font-size: 16px; "></th>
+    <td>②v2对应的是繁体字</td>
+  </tr>
+  
+    <tr>
+	
+    <th style="font-weight: bold;  text-align: right;font-size: 16px; "></th>
+    <td>v2 corresponds to Traditional Chinese characters.</td>
+  </tr>
+  
+    <tr>
+    <th style="font-weight: bold;  text-align: right;font-size: 16px; "></th>
+    <td style="color: red;" >③v3对应的是简化字，也是目前汉字的最新版本，本系统显示及搜索等功能只支持简化字</td>
+  </tr>
+      <tr>
+    <th style="font-weight: bold;  text-align: right;font-size: 16px; "></th>
+    <td style="color: red;" >v3 corresponds to Simplified Chinese characters, which is currently the latest version of Chinese characters.</td>
+  </tr>
+        <tr>
+    <th style="font-weight: bold;  text-align: right;font-size: 16px; "></th>
+    <td style="color: red;" >The display and search functions of this system only support Simplified Chinese characters.</td>
+  </tr>
+      <tr>
+    <th style="font-weight: bold;  text-align: right;font-size: 16px; "></th>
+    <td>④v4是按照汉字造字规律，综合考虑各种因素，并纠正一些传承错误下的一种理想状态下的书写方式，只做为兴趣研究</td>
+  </tr>
+        <tr>
+    <th style="font-weight: bold;  text-align: right;font-size: 16px; "></th>
+    <td>v4 is a ideal write</td>
+  </tr>
+   <tr>
+    <th style="font-weight: bold;  text-align: right;font-size: 16px; "></th>
+    <td>⑤汉字是一种和现代计算机程序语言类似的语言,仓颉如果活在现在， 他一定是个程序员</td>
+  </tr></table></div>
+</div>
 
 
 <div id="content" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
    <div class="noprint opt" style="height: 47px; margin: 5px; float: right; text-align: right;"></div>
     <div style="overflow-x: auto;">
-        <table id="titleline" border="0" style="display: flex; flex-direction: row;">
-
-  <tr>
-    <th style="font-weight: bold; text-align: left;font-size: 16px; ">上古音(ancient-pronunciation):</th>
-    <td id="ancient-pronunciation">/ŋiwə/</td>
-  </tr>
-  <tr>
-    <th style="font-weight: bold;  text-align: left;font-size: 16px; ">现代拼音(pin-yin):</th>
-    <td id="pin-yin">/niú/</td>
-  </tr>
+        <table id="maincontent" border="0" style="display: flex; flex-direction: row;">
 
 
            <tr>
@@ -189,7 +241,7 @@ function applyfilter(topicid) {
  <script type="text/javascript">
 function replaceImages(symbol, ancient, pinyin) {
   // Get all the img elements in the table
-  const images = document.querySelectorAll('#titleline img[alt]');
+  const images = document.querySelectorAll('#maincontent img[alt]');
   const ancientPronunciation = document.getElementById('ancient-pronunciation');
   const py = document.getElementById('pin-yin');
   ancientPronunciation.textContent = `/${ancient}/`;

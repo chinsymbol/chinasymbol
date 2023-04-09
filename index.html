@@ -123,11 +123,7 @@
 　<div style="display: inline-block; zoom: 1; *display: inline;'"><a href="rulin-waishi" class="sprite-expand" title="+" >+<div style="display: inline;"></div></a></div><a class="etext" style="font-weight: bold;" href="rulin-waishi" >The Scholars</a><br />
 </span></span>
 
-<div class="menuitem listhead opt"><a  style="font-weight: bold;">Notes</a></div>
-<div class="menuitem listhead"><a  style="font-weight: bold;">Resources</a></div>
-<div class="menuitem listhead"><a  style="font-weight: bold;" >Dictionary</a></div>
-<div class="menuitem listhead"><a  style="font-weight: bold;">Discussion</a></div>
-
+<div class="menuitem listhead opt"><a  style="font-weight: bold;" >Notes</a></div><div class="menuitem listhead"><a  style="font-weight: bold;"">Resources</a></div><div class="menuitem listhead"><a  style="font-weight: bold;" >Dictionary</a></div><div class="menuitem listhead"><a  style="font-weight: bold;">Discussion</a></div><div class="menuitem listhead"><a  style="font-weight: bold;" >Library</a></div><div class="menuitem listhead"><a  style="font-weight: bold;">Wiki</a></div><div class="menuitem listhead"><a  style="font-weight: bold;">Data Wiki</a></div></div>
 
 
 
@@ -137,7 +133,7 @@
 <a href="searchbooks.pl?if=en">搜索</a><span class="opt">:<br />
 <form id="searchform" method="get" action="searchbooks.pl">
 <input type="hidden" name="if" value="en" />
-<input type="text" name="searchu" size="5"  value="" class="searchbox" /><br />
+<input type="text" name="searchu" size="20"  value="" class="searchbox" /><br />
 <input type="submit" value="Search" />
 </form>
 </span></div>
@@ -152,6 +148,19 @@ function applyfilter(topicid) {
 </div>
 
 
+<div id="content" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+   <div class="noprint opt" style="height: 47px; margin: 5px; float: right; text-align: right;"></div>
+    <div style="overflow-x: auto;">
+        <table id="titleline" border="0" style="display: flex; flex-direction: row;">
+           <tr>
+               <td style="flex: 1; padding: 10px; box-sizing: border-box;"><img src="image.jpg" alt="图片1"></td>
+               <td style="flex: 1; padding: 10px; box-sizing: border-box;"><img src="image2.jpg" alt="图片2"></td>
+               <td style="flex: 1; padding: 10px; box-sizing: border-box;"><img src="image3.jpg" alt="图片3"></td>
+               <td style="flex: 1; padding: 10px; box-sizing: border-box;"><img src="image4.jpg" alt="图片4"></td>
+           </tr>
+		   </table>
+   </div>
+</div>
 
 
 

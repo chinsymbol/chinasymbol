@@ -6,7 +6,7 @@
  <base href="https://ctext.org/" />
  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
  <meta http-equiv="Content-Language" content="zh-TW" />
- <meta name="Author" content="Donald Sturgeon" />
+ <meta name="Author" content="CangJie" />
  <meta name="viewport" content="width=device-width, target-densitydpi=device-dpi, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
  <meta name="created" content="Sat, 04 Mar 2023 06:13:14 GMT" />
  <meta name="if" content="en" />
@@ -38,10 +38,10 @@
 <span class="menuitem container"><div style="display: inline-block; zoom: 1; *display: inline;'"><div class="sprite-expand" title="+" id="x47084" class="subtitle"><div></div></div></div><a class="etext" style="font-weight: bold;" id="m47084" href="javascript:void(0)">动物(Animal)</a><br />
 
 
-<span class="subcontents"><span style="float: right; display: block; "><div style="display: inline-block; zoom: 1; *display: inline;'"></div></span>　<div style="display: inline-block; zoom: 1; *display: inline;'"></div><a class="etext" style="font-weight: bold;" id ="cow" href="javascript:void(0)" onclick="replaceImages(this.id)">牛(cow)</a><br />
+<span class="subcontents"><span style="float: right; display: block; "><div style="display: inline-block; zoom: 1; *display: inline;'"></div></span>　<div style="display: inline-block; zoom: 1; *display: inline;'"></div><a class="etext" style="font-weight: bold;" id ="cow" href="javascript:void(0)" onclick="replaceImages(this.id, 'ŋiwə', 'niú')">牛(cow)</a><br />
 
 
-<span style="float: right; display: block; "><div style="display: inline-block; zoom: 1; *display: inline;'"></div></span>　<div style="display: inline-block; zoom: 1; *display: inline;'"></div><a class="etext" style="font-weight: bold;"  href="javascript:void(0)" id ="goat" onclick="replaceImages(this.id)">羊(goat)</a><br />
+<span style="float: right; display: block; "><div style="display: inline-block; zoom: 1; *display: inline;'"></div></span>　<div style="display: inline-block; zoom: 1; *display: inline;'"></div><a class="etext" style="font-weight: bold;"  href="javascript:void(0)" id ="goat" onclick="replaceImages(this.id, 'ŋaŋ','yáng')">羊(goat)</a><br />
 
 
 
@@ -161,12 +161,12 @@ function applyfilter(topicid) {
         <table id="titleline" border="0" style="display: flex; flex-direction: row;">
 
   <tr>
-    <th style="font-weight: bold; text-align: left;font-size: 16px; ">上古音(original pronounce):</th>
-    <td>/ŋǐwə/</td>
+    <th style="font-weight: bold; text-align: left;font-size: 16px; ">上古音(ancient-pronunciation):</th>
+    <td id="ancient-pronunciation">/ŋiwə/</td>
   </tr>
   <tr>
-    <th style="font-weight: bold;  text-align: left;font-size: 16px; ">现代拼音(pinyin):</th>
-    <td>/niú/</td>
+    <th style="font-weight: bold;  text-align: left;font-size: 16px; ">现代拼音(pin-yin):</th>
+    <td id="pin-yin">/niú/</td>
   </tr>
 
 
@@ -187,15 +187,20 @@ function applyfilter(topicid) {
 </div>
 
  <script type="text/javascript">
-function replaceImages(symbol) {
+function replaceImages(symbol, ancient, pinyin) {
   // Get all the img elements in the table
   const images = document.querySelectorAll('#titleline img[alt]');
 
+  
   // Loop through the images and replace their src attributes
   for (let i = 0; i < images.length; i++) {
     const newSrc = `https://chinsymbol.github.io/${symbol}_${i}.PNG`;
     images[i].src = newSrc;
   }
+  const ancientPronunciation = document.getElementById('ancient-pronunciation');
+  ancientPronunciation.textContent = ${ancient};
+  const ancientPronunciation = document.getElementById('pin-yin');
+  ancientPronunciation.textContent = ${pinyin};
 }
 </script>
 	

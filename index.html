@@ -193,9 +193,8 @@ function replaceImages(symbol) {
 
   // Loop through the images and replace their src attributes
   for (let i = 0; i < images.length; i++) {
-    const newSrc = `https://chinsymbol.github.io/${symbol}_0.PNG`;
+    const newSrc = `https://chinsymbol.github.io/${symbol}_${i}.PNG`;
     images[i].src = newSrc;
-    images[i].alt = `图片${i}`;
   }
 }
 </script>

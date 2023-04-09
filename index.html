@@ -38,7 +38,7 @@
 </div><span class="menuitem container"><div style="display: inline-block; zoom: 1; *display: inline;'"><div class="sprite-expand" title="+" id="x47084" class="subtitle"><div></div></div></div><a class="etext" style="font-weight: bold;" id="m47084" href="confucianism" >动物</a><br />
 
 
-<span class="subcontents"><span style="float: right; display: block; "><div style="display: inline-block; zoom: 1; *display: inline;'"></div></span>　<div style="display: inline-block; zoom: 1; *display: inline;'"></div><a class="etext" style="font-weight: bold;" onclick="replaceImages(this.innerText)">牛(cow/bull)</a><br />
+<span class="subcontents"><span style="float: right; display: block; "><div style="display: inline-block; zoom: 1; *display: inline;'"></div></span>　<div style="display: inline-block; zoom: 1; *display: inline;'"></div><a class="etext" style="font-weight: bold;" id ="cow"  onclick="replaceImages(this.id)">牛(cow)</a><br />
 
 
 <span style="float: right; display: block; "><div style="display: inline-block; zoom: 1; *display: inline;'"></div></span>　<div style="display: inline-block; zoom: 1; *display: inline;'"></div><a class="etext" style="font-weight: bold;" href="liji">羊(goat/sheep)</a><br />
@@ -178,7 +178,7 @@ function replaceImages(symbol) {
 
   // Loop through the images and replace their src attributes
   for (let i = 0; i < images.length; i++) {
-    const newSrc = ${symbol}${i}.jpg`;
+    const newSrc = ${symbol}0.jpg`;
     images[i].src = newSrc;
     images[i].alt = `图片${i}`;
   }
